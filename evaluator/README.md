@@ -8,6 +8,19 @@
 - `reference-solution/`: arquivos completos que substituem os TODOs.
 - `tests/`: cenários adicionais de backend e frontend.
 - `reference-solution.patch`: patch da solução completa.
+- `package-candidate.mjs`: exportador com allowlist para distribuição segura.
+
+## Gerar o pacote do candidato
+
+Na raiz do repositório, execute:
+
+```bash
+node evaluator/package-candidate.mjs
+```
+
+O pacote será recriado em `dist/candidate/` contendo somente os arquivos
+necessários ao desafio. O processo exclui `evaluator/`, `docs/` e `AGENTS.md`
+para não expor respostas ou instruções internas.
 
 ## Validar a solução de referência
 

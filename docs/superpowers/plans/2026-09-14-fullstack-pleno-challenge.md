@@ -206,7 +206,9 @@ Use `result`, `isLoading`, and `error` state; disable the button during requests
 
 - [ ] **Step 5: Generate the reference patch**
 
-Create a patch that replaces the two candidate TODO files with reference files and include the already-complete API client for review convenience.
+Create a patch that replaces the two candidate TODO files. Keep the
+already-complete API client as a separate reference file for review
+convenience because it has no candidate/reference diff.
 
 - [ ] **Step 6: Write evaluator guidance and rubric**
 
@@ -238,7 +240,7 @@ Include the exact setup, URLs, rule list, reason codes, endpoint, frontend behav
 Run:
 
 ```bash
-rg -n "TODO" --glob '!node_modules/**' --glob '!docs/**' .
+rg -n "TODO" apps/api/src apps/web/src
 ```
 
 Expected: exactly the service TODO and component TODO.

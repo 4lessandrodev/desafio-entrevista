@@ -48,6 +48,14 @@ describe('EligibilityCard', () => {
         'Paciente elegível para atendimento domiciliar.',
       ),
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Verificar elegibilidade' }),
+    ).toBeEnabled();
+    expect(
+      screen.queryByRole('button', {
+        name: 'Verificando elegibilidade...',
+      }),
+    ).not.toBeInTheDocument();
   });
 
   it('shows an ineligible result', async () => {
@@ -84,5 +92,13 @@ describe('EligibilityCard', () => {
         'Não foi possível verificar a elegibilidade.',
       ),
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Verificar elegibilidade' }),
+    ).toBeEnabled();
+    expect(
+      screen.queryByRole('button', {
+        name: 'Verificando elegibilidade...',
+      }),
+    ).not.toBeInTheDocument();
   });
 });
