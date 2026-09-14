@@ -63,3 +63,5 @@ Ao clicar em **Verificar elegibilidade**:
 Caso tenha tempo, adicione ou melhore testes.
 
 Ao finalizar, esteja preparado para explicar as decisões tomadas.
+
+Obrigado!
